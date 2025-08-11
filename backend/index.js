@@ -5,9 +5,11 @@ import dotenv from "dotenv";
 
 dotenv.config();
 const app = express();
-app.use(cors(
-      
-));
+app.use(cors({
+  origin: "*", // test ke liye sab allow
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+}));
 app.use(express.json());
 
 app.post("/send-email", async (req, res) => {
