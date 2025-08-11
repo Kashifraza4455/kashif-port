@@ -427,6 +427,7 @@ efficient.</p>
 
 <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
     <div class="container">
+        <!-- Heading -->
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section text-center ftco-animate">
                 <h1 class="big big-2">Contact</h1>
@@ -434,6 +435,7 @@ efficient.</p>
             </div>
         </div>
 
+        <!-- Contact Info -->
         <div class="row d-flex contact-info mb-5">
             <div class="col-md-6 col-lg-3 d-flex ftco-animate">
                 <div class="align-self-stretch box p-4 text-center">
@@ -473,34 +475,39 @@ efficient.</p>
             </div>
         </div>
 
+        <!-- Form -->
         <div class="row no-gutters block-9">
             <div class="col-md-6 order-md-last d-flex">
-                <!-- Direct mailto form -->
                 <form id="contact-form" class="bg-light p-4 p-md-5 contact-form">
                     <div class="form-group">
-                        <input type="text" name="Name" class="form-control" placeholder="Your Name" required>
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="Email" class="form-control" placeholder="Your Email" required>
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="Subject" class="form-control" placeholder="Subject" required>
+                        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="Message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+                        <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                        <button type="submit" class="btn btn-primary py-3 px-5" id="submit-btn">
+                            <span id="btn-text">Send Message</span>
+                            <span id="btn-loader" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        </button>
                     </div>
                 </form>
             </div>
 
+            <!-- Image -->
             <div class="col-md-6 d-flex">
                 <div class="img" style="background-image: url(images/about.jpg);"></div>
             </div>
         </div>
     </div>
 </section>
+
 
 
 
@@ -596,7 +603,7 @@ efficient.</p>
 			};
 
 			// ✅ Replace this with your actual backend URL on Render
-			const res = await fetch("https://moiz.onrender.com/send-email", {
+			const res = await fetch("https://kashif-port.onrender.com/send-email", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(formData),

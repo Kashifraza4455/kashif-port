@@ -296,7 +296,7 @@ const form = document.getElementById("contact-form");
     };
 
     try {
-      const res = await fetch("https://moiz.onrender.com/send-email", {
+      const res = await fetch("https://kashif-port.onrender.com/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
