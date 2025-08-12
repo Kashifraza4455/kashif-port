@@ -8081,10 +8081,16 @@ a.text-dark:hover, a.text-dark:focus {
   height: 100vh;
 }
 
+@media (max-width: 768px) {
+  body{
+    overflow-y: hidden  !important;
+  }
+}
 
 
-
-
+span.text1 {
+    font-size: 12px;
+}
 @media print {
   *,
   *::before,
