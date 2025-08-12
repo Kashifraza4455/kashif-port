@@ -324,17 +324,10 @@ const form = document.getElementById("contact-form");
       alert("❌ Error: " + error.message);
     }
   });
-  $('.home-slider').on('initialized.owl.carousel', function () {
-  $('body').css('overflow-y', 'hidden');
+$('.home-slider').on('initialized.owl.carousel', function () {
+  $('body').css('overflow-y', 'auto');
 });
-$('.navbar-nav .nav-link').on('click', function () {
-  $('.navbar-collapse').collapse('hide');
-  $('body').removeClass('menu-show').css({
-    'overflow-y': 'auto',
-    'position': 'relative',
-    'height': 'auto'
-  });
-});
+
 $('.navbar-nav .nav-link').on('click', function () {
   // Bootstrap collapse menu ko hide karo
   $('.navbar-collapse').collapse('hide');
